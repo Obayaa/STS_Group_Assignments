@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+</head>
+<body>
+    <form action="#" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Job Application Form</legend>
+            
+            <!-- Full Name -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="full_name" placeholder="Enter your full name" required>
+            <br><br>
+            
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <br><br>
+            
+            <!-- Password -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br><br>
+            
+            <!-- Date of Birth -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+            <br><br>
+            
+            <!-- Gender -->
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <br><br>
+            
+            <!-- Resume Upload -->
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume">
+            <br><br>
+            
+            <!-- Skills -->
+            <label for="skills">Skills:</label>
+            <textarea id="skills" name="skills" rows="4" cols="30" placeholder="List your skills here..."></textarea>
+            <br><br>
+            
+            <!-- Job Role -->
+            <label for="job_role">Job Role:</label>
+            <select id="job_role" name="job_role">
+                <optgroup label="Tech Roles">
+                    <option value="frontend_developer">Frontend Developer</option>
+                    <option value="backend_developer">Backend Developer</option>
+                </optgroup>
+                <optgroup label="Non-Tech Roles">
+                    <option value="hr">HR Specialist</option>
+                    <option value="project_manager">Project Manager</option>
+                </optgroup>
+            </select>
+            <br><br>
+            
+            <!-- Experience Level -->
+            <label for="experience">Experience Level:</label>
+            <input list="experience_list" id="experience" name="experience">
+            <datalist id="experience_list">
+                <option value="Entry Level">
+                <option value="Mid Level">
+                <option value="Senior Level">
+            </datalist>
+            <br><br>
+            
+            <!-- Expected Salary -->
+            <label for="salary">Expected Salary ($):</label>
+            <input type="range" id="salary" name="salary" min="1000" max="10000" step="500" oninput="document.getElementById('salary_output').textContent = this.value;">
+            <output id="salary_output">5000</output>
+            <br><br>
+            
+            <!-- Agreement -->
+            <label>
+                <input type="checkbox" name="terms" required> I agree to the terms and conditions.
+            </label>
+            <br><br>
+            
+            <!-- Submit -->
+            <button type="submit">Submit Application</button>
+            <button type="reset">Reset Form</button>
+        </fieldset>
+    </form>
+</body>
+</html>
+
+
+
+<!-- Assignment Instructions:
+Task: Recreate the form using HTML.
+Requirements:
+Include all form elements listed above.
+Add appropriate labels, placeholders, and validation where necessary.
+Submission:
+Save your file as job_application_form.html.
+Ensure it works correctly in your browser. -->
